@@ -129,5 +129,4 @@ public class StringsAndThings {
         }
         return TripleCount;
     }
-    }
 }
