@@ -85,24 +85,19 @@ public class StringsAndThings {
      *           gHappy("xxgxx") // Should return  false
      *           gHappy("xxggyygxx") // Should return  false
      */
-    public Boolean gIsHappy(String input){
+    public Boolean gIsHappy(String input) {
         boolean happyG = false;
-        for(int index = 0; index < input.length(); index++)
-        {
-            if (input.charAt(index) == 'g')
-            {
-                if (index <= input.length() - 2)
-                {
-                    if (input.charAt(index + 1) == 'g')
-                    {
+        for (int index = 0; index < input.length(); index++) {
+            if (input.charAt(index) == 'g') {
+                if (index <= input.length() - 2) {
+                    if (input.charAt(index + 1) == 'g') {
                         happyG = true;
-                    }
-                    else if (index > 0)
-                    {
-                        if (input.charAt(index-1) == 'g') {
+                    } else if (index > 0) {
+                        if (input.charAt(index - 1) == 'g') {
                             happyG = true;
                         }
-                    }
+                        else return false;
+                    } else return false;
                 }
             }
         }
